@@ -4,68 +4,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Portfolio</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
+
+  <!-- Font Awesome for sidebar icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Devicon for language icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Sidebar -->
   <aside class="sidebar">
     <div class="logo">
       <i class="fa-solid fa-user"></i>
-      <span class="logo" src="my photo.png"></span>
+      <span>Dipta</span>
     </div>
     <nav>
       <ul>
-        <li>
-          <a href="#header">
-            <i class="fa-solid fa-house"></i>
-            <span class="label">Home</span>
-          </a>
-        </li>
-        <li>
-          <a href="#Academic">
-            <i class="fa-solid fa-graduation-cap"></i>
-            <span class="label">Academic</span>
-          </a>
-        </li>
-        <li>
-          <a href="#Projects">
-            <i class="fa-solid fa-folder-open"></i>
-            <span class="label">Projects</span>
-          </a>
-        </li>
-        <li>
-          <a href="#Achievements">
-            <i class="fa-solid fa-trophy"></i>
-            <span class="label">Achievements</span>
-          </a>
-        </li>
-        <li>
-          <a href="#About">
-            <i class="fa-solid fa-info-circle"></i>
-            <span class="label">About me</span>
-          </a>
-        </li>
-        <li>
-          <a href="#Contact">
-            <i class="fa-solid fa-envelope"></i>
-            <span class="label">Contact me</span>
-          </a>
-        </li>
+        <li><a href="#header"><i class="fa-solid fa-house"></i><span class="label">Home</span></a></li>
+        
+        <li><a href="#Academic"><i class="fa-solid fa-graduation-cap"></i><span class="label">Academic</span></a></li>
+        <li><a href="#Skills"><i class="	fa-solid fa-screwdriver-wrench"></i><span class="label">Skills</span></a></li>
+        <li><a href="#Projects"><i class="fa-solid fa-folder-open"></i><span class="label">Projects</span></a></li>
+        
+        
+        <li><a href="#Achievements"><i class="fa-solid fa-trophy"></i><span class="label">Achievements</span></a></li>
+        <li><a href="#About"><i class="fa-solid fa-info-circle"></i><span class="label">About me</span></a></li>
+        <li><a href="#Contact"><i class="fa-solid fa-envelope"></i><span class="label">Contact me</span></a></li>
       </ul>
     </nav>
   </aside>
 
+  <!-- Main Content -->
   <main class="main-content">
+    <!-- Intro -->
     <section id="header" class="intro full-view animate-on-scroll">
       <h1>Welcome to my world</h1>
       <h1>I am Dipta Chowdhury</h1>
       <p>A passionate programmer</p>
     </section>
 
+    <!-- About -->
     <section id="About" class="about-me animate-on-scroll">
       <img src="my photo.png" alt="Dipta" class="about-photo" />
       <div class="about-text">
@@ -76,29 +57,195 @@
           My goal is to bring my innovative ideas into reality and contribute to impactful projects.
         </p>
       </div>
-</section>
+    </section>
+
+    <!-- Academic -->
     <section id="Academic" class="academic animate-on-scroll">
-        <div class="academic-txt">
-            <h2>Bachelor on Computer Science and Engineering ( Running )</h2>
-            <h3>Khulna University of Engineering & Technology</h3>
-            
-            <h2>Higher Secondary School Certificate ( HSC )</h2>
-            <h3>Result: GPA: 5.00</h3>
-            <h3> Chittagong College</h3>
-            
-            <h2> Secondary School Certificate ( SSC )</h2>
-            <h3>Result: GPA: 5.00</h3>
-            <h3> Chittagong Collegiate School</h3>
-            
+      <div class="academic-txt">
+        <h2>Bachelor in Computer Science and Engineering (Running)</h2>
+        <h3>Khulna University of Engineering & Technology</h3>
+
+        <h2>Higher Secondary School Certificate (HSC)</h2>
+        <h3>GPA: 5.00</h3>
+        <h3>Chittagong College</h3>
+
+        <h2>Secondary School Certificate (SSC)</h2>
+        <h3>GPA: 5.00</h3>
+        <h3>Chittagong Collegiate School</h3>
+      </div>
+    </section>
+
+    <section id="Skills" class="skill animate-on-scroll">
+      <h2>My Skills</h2>
+      <div class="skills-container">
+        <!-- Technical Skills -->
+        <div class="skills-column">
+          <h3><i class="fa-solid fa-laptop-code"></i> Technical Skills</h3>
+          <ul class="skills-list">
+            <li><i class="devicon-c-plain colored"></i> C</li>
+            <li><i class="devicon-cplusplus-plain colored"></i> C++</li>
+            <li><i class="devicon-java-plain colored"></i> Java</li>
+            <li><i class="devicon-python-plain colored"></i> Python</li>
+            <li><i class="devicon-html5-plain colored"></i> HTML</li>
+            <li><i class="devicon-css3-plain colored"></i> CSS</li>
+            <li><i class="devicon-javascript-plain colored"></i> JavaScript</li>
+            <li><i class="devicon-firebase-plain colored"></i> Firebase</li>
+            <li><i class="devicon-androidstudio-plain colored"></i> Android Studio</li>
+            <li><i class="fa-solid fa-microchip"></i> Logisim (Digital Circuit Design)</li>
+          </ul>
         </div>
     
-
+        <!-- Soft Skills -->
+        <div class="skills-column">
+          <h3><i class="fa-solid fa-brain"></i> Soft Skills</h3>
+          <ul class="skills-list">
+            <li><i class="fa-solid fa-users"></i> Teamwork</li>
+            <li><i class="fa-solid fa-comments"></i> Communication</li>
+            <li><i class="fa-solid fa-lightbulb"></i> Problem Solving</li>
+            <li><i class="fa-solid fa-clock"></i> Time Management</li>
+            <li><i class="fa-solid fa-pen-to-square"></i> Critical Thinking</li>
+            <li><i class="fa-solid fa-people-group"></i> Collaboration</li>
+          </ul>
+        </div>
+    
+        <!-- Non-Technical Skills -->
+        <div class="skills-column">
+          <h3><i class="fa-solid fa-toolbox"></i> Non-Technical Skills</h3>
+          <ul class="skills-list">
+            <li><i class="fa-solid fa-language"></i> English Communication</li>
+            <li><i class="fa-solid fa-chart-line"></i> Presentation Skills</li>
+            <li><i class="fa-solid fa-book"></i> Academic Writing</li>
+            <li><i class="fa-solid fa-bolt"></i> Quick Learning</li>
+            <li><i class="fa-solid fa-eye"></i> Attention to Detail</li>
+            <li><i class="fa-solid fa-face-smile"></i> Positive Attitude</li>
+          </ul>
+        </div>
+      </div>
     </section>
+    
+
+
+    <!-- Projects -->
+    <section id="Projects" class="projects animate-on-scroll">
+      <h2>My Projects</h2>
+      <ul class="project-list">
+
+        <!-- Project Item -->
+        <li class="project-item">
+          <a href="https://github.com/Dipta117/UniConnect" target="_blank">
+            <img src="applogo.jpg" alt="UniConnect" class="project-img" />
+          </a>
+          <div class="project-details">
+            <a href="https://github.com/Dipta117/UniConnect" target="_blank">
+              <h3>UniConnect App</h3>
+            </a>
+            <p>UniConnect is a university-based social platform designed to bridge the gap between students and teachers by integrating the features of classroom activities with social networking. This platform fosters communication, collaboration, and academic productivity in an easy-to-use interface.</p>
+
+            <!-- Language Icons -->
+            <ul class="language-icons">
+              <li title="Java"><i class="devicon-java-plain colored"></i>
+              <span>Java</span>
+              </li>
+              <li title="Firebase"><i class="devicon-firebase-plain colored"></i>
+              <span>Firebase</span>
+              </li>
+              <li title="Android Studio"><i class="devicon-androidstudio-plain colored"></i>
+              <span>Android Studio</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+
+        <li class="project-item">
+          <a href="https://save-links.en.uptodown.com/android" target="_blank">
+            <img src="3419501.png" alt="Save Links" class="project-img" />
+          </a>
+          <div class="project-details">
+            <a href="https://save-links.en.uptodown.com/android" target="_blank">
+              <h3>Save Links App</h3>
+            </a>
+            <p>A useful weblink saver Android app</p>
+
+            <!-- Language Icons -->
+            <ul class="language-icons">
+              <li title="Java"><i class="devicon-java-plain colored"></i>
+              <span>Java</span>
+              
+              <li title="Android Studio"><i class="devicon-androidstudio-plain colored"></i>
+              <span>Android Studio</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        
+        <li class="project-item">
+          <a href="https://github.com/Dipta117/Time-up" target="_blank">
+            <img src="timr.png" alt="Save Links" class="project-img" />
+          </a>
+          <div class="project-details">
+            <a href="https://github.com/Dipta117/Time-up" target="_blank">
+              <h3>Time-Up App</h3>
+            </a>
+            <p>
+
+              Time-Up is a simple, user-friendly android app ( webview based ) that helps you organize daily tasks with deadlines.
+               It lets you add, track, and mark tasks as completed while visually showing your overall progress. 
+               With local storage support and a clean interface, it’s perfect for managing your tasks efficiently.
+              </p>
+
+            <!-- Language Icons -->
+            <ul class="language-icons">
+              <li title="Java"><i class="devicon-java-plain colored"></i>
+              <span>Java</span>
+              
+              <li title="Android Studio"><i class="devicon-androidstudio-plain colored"></i>
+              <span>Android Studio</span>
+
+              <li title="HTML"><i class="devicon-html5-plain colored"></i>
+                <span>HTML</span>
+                <li title="CSS"><i class="devicon-css3-plain colored"></i>
+                  <span>CSS</span>
+                  <li title="JS"><i class="devicon-javascript-plain colored"></i>
+                    <span>Javascript</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="project-item">
+          
+          <div class="project-details">
+            <a href="https://github.com/Dipta117/Industry_Management_System" target="_blank">
+              <h3>Industry_Management_System</h3>
+            </a>
+            <p>
+
+              Time-Up is a simple, user-friendly android app ( webview based ) that helps you organize daily tasks with deadlines.
+               It lets you add, track, and mark tasks as completed while visually showing your overall progress. 
+               With local storage support and a clean interface, it’s perfect for managing your tasks efficiently.
+              </p>
+
+            <!-- Language Icons -->
+            <ul class="language-icons">
+              <li title="Java"><i class="devicon-c++-plain colored"></i>
+              <span>C++</span>
+              
+              
+              </li>
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    
+</section>
+
   </main>
 
-  <script src="script.js">
-   
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
