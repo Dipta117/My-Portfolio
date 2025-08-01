@@ -74,6 +74,13 @@ body {
   flex: 1;
   overflow-x: hidden;
 }
+.main-content-aca {
+  margin-left: 220px;
+  
+  padding: 40px 50px;
+  flex: 1;
+  overflow-x: hidden;
+}
 
 /* Full-view sections */
 .full-view {
@@ -138,6 +145,7 @@ body {
 
 /* Academic */
 .academic {
+  
   background-color: white;
   padding: 30px;
   border-radius: 12px;
