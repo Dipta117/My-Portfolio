@@ -9,7 +9,7 @@
 body {
   background-color: #f5f5f5;
   color: #333;
-  min-height: 100vh;
+  height: 100%;
   display: flex;
 }
 
@@ -18,7 +18,7 @@ body {
   position: fixed;
   width: 220px;
   height: 100vh;
-  background-color: #0e1821;
+    background: linear-gradient(to bottom right, #2f2f2f, #4f4f4f, #6f6f6f);
   color: white;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@ body {
 }
 
 .sidebar .logo {
-  text-align: center;
+  text-align: left;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 40px;
@@ -35,9 +35,17 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  color: #f39c12;
+  color: #069bff;
 }
 
+.lg{
+  border-radius: 50%;
+  width: 70px;
+  height: 50px;
+}
+.lg-link{
+  text-decoration: none;
+}
 .sidebar nav ul {
   list-style: none;
 }
@@ -50,22 +58,40 @@ body {
   color: white;
   text-decoration: none;
   display: flex;
+  position: relative;
   align-items: center;
   gap: 12px;
+  overflow: hidden;
+  z-index:0;
   padding: 10px 20px;
   transition: background-color 0.3s ease;
   border-radius: 4px;
 }
 
-.sidebar nav ul li a:hover,
-.sidebar nav ul li a.active {
-  background-color: #f39c12;
-  color: #0e1821;
+.sidebar nav ul li a::before {
+content: "";
+ position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 0;
+  background-color: #069bff;  
+  z-index: -1;
+  transition: width 0.3s ease;
 }
+
+
+
+.sidebar nav ul li a:hover::before,
+.sidebar nav ul li a.active::before {
+width:100%;
+  
+}
+
+
 
 .sidebar nav ul li a .label {
   font-size: 18px;
 }
+
 
 /* Main content */
 .main-content {
@@ -75,6 +101,24 @@ body {
   overflow-x: hidden;
 }
 
+
+
+#bgVideo {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.video-overlay{
+   position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+ background: rgba(0,0,0,0.5);
+  z-index: -1;
+}
 
 /* Full-view sections */
 .full-view {
@@ -97,21 +141,67 @@ body {
 
 /* Intro */
 .intro {
+ 
   text-align: center;
-  padding-top: 80px;
-  color: #0e1821;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: white;
+ 
+}
+.typing-text {
+  overflow: hidden;
+  white-space: nowrap;
+  
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.8s step-end infinite;
 }
 
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+.slide-up-name {
+  opacity: 0;
+  transform: translateY(50px);
+ animation: slideUp 1.2s ease-out 2.5s forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+ animation: slideUp 1.2s ease-out 3.5s forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
 .intro h1 {
-  font-size: 3rem;
+  font-size: 8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.intro h2 {
+  font-size: 5rem;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
 .intro p {
-  font-size: 1.4rem;
+  margin-top: 5px;
+  font-size: 2rem;
   font-weight: 500;
-  color: #555;
+  color: white;
 }
 
 /* About Me */
@@ -123,23 +213,28 @@ body {
 }
 
 .about-photo {
-  width: 280px;
+  width: 350px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  height: 500px;
 }
 
+
 .about-text {
-  max-width: 600px;
+ 
+  color:white;
 }
 
 .about-text h2 {
   font-size: 2.4rem;
   margin-bottom: 20px;
+  color:white;
 }
 
 .about-text p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.6;
+  color:white;
 }
 
 /* Academic */
@@ -150,18 +245,19 @@ body {
   border-radius: 12px;
   box-shadow: 0 0 12px rgba(0,0,0,0.1);
   color: #0e1821;
-  max-width: 700px;
+  
+  max-width: 100%;
 }
 
 .academic h2 {
   font-size: 1.8rem;
-  margin-top: 15px;
+  margin-top: 90px;
 }
 
 .academic h3 {
   font-size: 1.3rem;
   font-weight: 500;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 /* Skills */
@@ -261,6 +357,8 @@ body {
 .contact {
   text-align: center;
   color: #0e1821;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-container {
@@ -344,12 +442,15 @@ body {
 }
 
 .social-links {
-  margin-top: 25px;
+  margin-top: 100px;
   font-size: 1.1rem;
+
+  text-align: center;
 }
 
 .social-links a {
-  color: #f39c12;
+  margin-top:100px;
+  color:rgb(200, 255, 0);
   text-decoration: none;
   margin: 0 10px;
 }

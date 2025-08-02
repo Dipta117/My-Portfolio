@@ -16,3 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(section);
   });
 });
+
+ const video = document.getElementById('bgVideo');
+  video.playbackRate = 0.48; 
