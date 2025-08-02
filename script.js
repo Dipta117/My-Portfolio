@@ -17,5 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('sidebar').classList.toggle('active');
+});
  const video = document.getElementById('bgVideo');
   video.playbackRate = 0.48; 
